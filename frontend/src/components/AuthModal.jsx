@@ -310,7 +310,7 @@ export default function AuthModal({
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full py-3 rounded-xl bg-gradient-to-r from-[#ff5500] to-[#ff3300] hover:from-[#ff6611] hover:to-[#ff4400] text-white font-bold text-sm shadow-[0_0_20px_-3px_rgba(255,85,0,0.5)] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                    className="w-full py-3 rounded-xl bg-[#ff5500] hover:bg-[#ff6611] text-black font-extrabold text-sm shadow-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50"
                   >
                     {loading ? (
                       <span className="flex items-center gap-2">
@@ -376,7 +376,7 @@ export default function AuthModal({
                   <button
                     onClick={handleVerifyOtp}
                     disabled={loading}
-                    className="w-full py-3 rounded-xl bg-gradient-to-r from-[#ff5500] to-[#ff3300] hover:from-[#ff6611] hover:to-[#ff4400] text-white font-bold text-sm shadow-[0_0_25px_-4px_rgba(255,85,0,0.5)] transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                    className="w-full py-3 rounded-xl bg-[#ff5500] hover:bg-[#ff6611] text-black font-extrabold text-sm shadow-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50"
                   >
                     {loading ? (
                       <span className="flex items-center gap-2">

@@ -5,15 +5,44 @@
 @tailwind utilities;
 
 @layer base {
-  * {
+  *,
+  *::before,
+  *::after {
     font-family: 'Outfit', 'Inter', sans-serif;
+    font-weight: 400;
   }
 
   body {
     font-family: 'Outfit', 'Inter', sans-serif;
     background-color: #000000;
     color: #e2e8f0;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+  }
+
+  strong, b, th, dt {
+    font-weight: 500;
+  }
+
+  button, input, optgroup, select, textarea {
+    font-weight: 400;
+  }
+}
+
+/* Global utility overrides to remove heavy bold and black text across entire website */
+.font-black,
+.font-extrabold,
+.font-bold {
+  font-weight: 500 !important;
+}
+
+.font-semibold {
+  font-weight: 400 !important;
 }
 
 /* Glassmorphism custom classes matching TUF / Sleek Dark Theme */
@@ -82,4 +111,39 @@
 
 .badge-hard {
   @apply bg-rose-500/15 text-rose-400 border border-rose-500/30;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.333333%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-33.333333%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 30s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
 }

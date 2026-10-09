@@ -124,7 +124,7 @@ export default function RoadmapView({ roadmap = [], onToggleTopic }) {
                       isCompleted 
                         ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.12)]' 
                         : isInProgress 
-                        ? 'bg-gradient-to-br from-[#ff5500]/15 to-[#ff7700]/5 border-[#ff5500]/40 text-[#ff6611] shadow-[0_0_20px_rgba(255,85,0,0.15)] ring-1 ring-[#ff5500]/20' 
+                        ? 'bg-[#ff5500]/15 border-[#ff5500]/40 text-[#ff6611] shadow-[0_0_20px_rgba(255,85,0,0.15)] ring-1 ring-[#ff5500]/20' 
                         : 'bg-white/[0.03] border-white/10 text-slate-400'
                     }`}>
                       {isCompleted ? (

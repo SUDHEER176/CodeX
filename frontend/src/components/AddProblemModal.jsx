@@ -225,7 +225,7 @@ export default function AddProblemModal({ isOpen, onClose, onAddProblem }) {
             </button>
             <button
               type="submit"
-              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-emerald-600 hover:from-brand-400 text-dark-950 font-bold text-xs shadow-glow-emerald"
+              className="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs shadow-sm transition-colors"
             >
               Log Problem & Update Streak
             </button>

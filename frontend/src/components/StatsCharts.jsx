@@ -66,19 +66,19 @@ export default function StatsCharts({ stats = {} }) {
       {/* Header */}
       <div className="glass-panel p-6 rounded-3xl flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-black text-white flex items-center gap-2.5">
+          <h1 className="text-2xl font-medium text-white flex items-center gap-2.5">
             <BarChart3 className="w-7 h-7 text-emerald-400" />
             <span>Progress & Performance Analytics</span>
           </h1>
-          <p className="text-sm text-slate-400 mt-1">
+          <p className="text-sm text-slate-400 mt-1 font-normal">
             Deep dive into your weekly velocity, problem distributions, and topic mastery.
           </p>
         </div>
 
         <div className="flex items-center gap-3">
           <div className="p-3 rounded-2xl bg-dark-900 border border-white/5 text-right">
-            <p className="text-xs text-slate-400 font-bold uppercase">Total Solved</p>
-            <p className="text-xl font-extrabold text-white font-mono">{stats.totalProblemsSolved || 0}</p>
+            <p className="text-xs text-slate-400 font-normal uppercase">Total Solved</p>
+            <p className="text-xl font-medium text-white font-mono">{stats.totalProblemsSolved || 0}</p>
           </div>
         </div>
       </div>
@@ -93,11 +93,11 @@ export default function StatsCharts({ stats = {} }) {
         <div className="glass-panel p-6 rounded-3xl space-y-4">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="text-base font-bold text-white flex items-center gap-2">
+              <h3 className="text-base font-medium text-white flex items-center gap-2">
                 <Zap className="w-4 h-4 text-emerald-400" />
                 <span>Weekly Velocity (Problems Solved)</span>
               </h3>
-              <p className="text-xs text-slate-400 mt-0.5">Problems solved per day across the current week</p>
+              <p className="text-xs text-slate-400 mt-0.5 font-normal">Problems solved per day across the current week</p>
             </div>
           </div>
 

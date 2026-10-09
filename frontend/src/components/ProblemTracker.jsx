@@ -102,7 +102,7 @@ export default function ProblemTracker({
 
         <button
           onClick={onOpenProblemModal}
-          className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-emerald-600 hover:from-brand-400 hover:to-emerald-500 text-dark-950 font-bold text-sm shadow-glow-emerald transition-all transform active:scale-95 self-start md:self-auto"
+          className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm shadow-sm transition-all transform active:scale-95 self-start md:self-auto"
         >
           <Plus className="w-4 h-4 stroke-[3]" />
           <span>Track New Problem</span>

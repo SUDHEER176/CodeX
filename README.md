@@ -33,7 +33,22 @@
 - **Signature Mesh Gradient**: Dynamic animated canvas shader mesh gradient with customizable color stops (`#ff5500`, `#ff3300`, `#2563eb`, `#1e1b4b`) and subtle grain texture.
 - **Glassmorphic Launch Header**: Dynamic streak badges, real-time problem metrics, quick action CTA triggers, and clean navigation shortcuts.
 
-### 2. 🍱 Magic UI Bento Grid Showcase
+### 2. 📋 React Bits Pro "Features 13" Block
+- **Accordion List with Live Preview Panel**: 4 interactive feature accordions with active indicator bars on the left and a live, animated preview panel on the right rendering dynamic mockups (Daily Task Sprint, Problem Detail with complexity breakdown, Spaced Repetition Queue, and Roadmap Milestone gauge).
+
+### 3. 🎯 React Bits Pro "Stats 15" Block
+- **Coverage Dial with Automation Ledger**: Large dual coverage radial gauge with animated SVG tracks, central percentage readout, comparison legend, and a 3-row automation ledger with mini circular progress dials.
+
+### 4. 🔄 React Bits Pro "Social Proof 9" Block
+- **Two-Direction Minimal Logo Marquee**: Dual continuous opposing marquees featuring top target engineering companies (Google, Meta, OpenAI, Stripe, Amazon, Apple, Palantir, etc.) with side-fade masks on pure black.
+
+### 5. 🛠️ React Bits Pro "How It Works 7" Block
+- **Four Steps around an Arched Live Simulator**: 4 interactive progression milestones (Roadmap selection, Daily practice, Spaced repetition, Streak analytics) wrapping around a central arched terminal simulator with live benchmark stats.
+
+### 6. 🟩 Motion-Animated Activity Heatmap
+- **Contribution-Style Calendar**: Interactive grid with diagonal wave reveals, digit-by-digit rolling totals, spring-gliding hover tooltips, and level filter swatches.
+
+### 3. 🍱 Magic UI Bento Grid Showcase
 - **Modern Feature Grid**: 4 interactive cards detailing the core system features:
   - **Structured Syllabus**: Visual milestone indicators with progress completion percentages.
   - **Active Streak Heatmap**: 7-day visual consistency matrix.

@@ -19,58 +19,58 @@ const BentoGrid = ({ children, className = "", ...props }) => {
 const BentoCard = ({
   name,
   className = "",
-  background,
   Icon,
   description,
   href = "#",
   cta = "Explore",
   onClick,
+  badge,
+  accentColor = "#ff5500",
   ...props
 }) => (
   <div
     key={name}
+    onClick={onClick}
     className={cn(
-      "group relative col-span-1 md:col-span-3 flex flex-col justify-between overflow-hidden rounded-2xl",
-      // Base styles & Pure Dark Theme matching CodeStreak
-      "bg-[#090d16]/90 border border-white/10 [box-shadow:0_0_0_1px_rgba(255,255,255,.05),0_8px_24px_rgba(0,0,0,.6)]",
-      "hover:border-[#ff5500]/40 transition-all duration-300",
+      "group relative col-span-1 md:col-span-3 flex flex-col justify-between overflow-hidden rounded-2xl cursor-pointer",
+      "bg-[#090d16] border border-white/10 p-6 transition-all duration-300",
+      "hover:border-white/20 hover:bg-[#0c121e] hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]",
       className
     )}
     {...props}
   >
-    {/* Background visual container */}
-    <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">{background}</div>
-
     {/* Content */}
-    <div className="relative z-10 p-6 flex flex-col justify-between h-full pointer-events-none">
-      <div className="flex flex-col gap-2">
-        {Icon && (
-          <div className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#ff6611] mb-1">
-            <Icon className="h-6 w-6 text-[#ff6611]" />
-          </div>
-        )}
-        <h3 className="text-xl font-black text-white font-heading tracking-wide">
+    <div className="relative z-10 flex flex-col justify-between h-full">
+      <div>
+        <div className="flex items-center justify-between gap-3 mb-4">
+          {Icon && (
+            <div className="flex items-center justify-center">
+              {typeof Icon === 'function' ? <Icon className="w-8 h-8" /> : Icon}
+            </div>
+          )}
+          {badge && (
+            <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-white/5 text-slate-300 border border-white/10">
+              {badge}
+            </span>
+          )}
+        </div>
+
+        <h3 className="text-xl font-bold text-white tracking-tight group-hover:text-white transition-colors">
           {name}
         </h3>
-        <p className="max-w-md text-sm text-slate-300 font-normal leading-relaxed">
+        <p className="mt-2 text-sm text-slate-400 font-normal leading-relaxed">
           {description}
         </p>
       </div>
 
-      {/* CTA Button */}
-      <div className="pt-4 pointer-events-auto">
-        <button
-          onClick={onClick}
-          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#ff6611] hover:text-white transition-colors group/btn"
-        >
+      {/* CTA Action */}
+      <div className="pt-6">
+        <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#ff6611] group-hover:text-white transition-colors">
           <span>{cta}</span>
-          <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-1" />
-        </button>
+          <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+        </div>
       </div>
     </div>
-
-    {/* Subtle Hover Overlay */}
-    <div className="pointer-events-none absolute inset-0 transition-opacity duration-300 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-40" />
   </div>
 );
 

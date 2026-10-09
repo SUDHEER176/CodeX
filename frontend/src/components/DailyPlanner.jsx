@@ -174,7 +174,7 @@ export default function DailyPlanner({
 
         <button
           onClick={onOpenTaskModal}
-          className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-brand-500 to-emerald-600 hover:from-brand-400 hover:to-emerald-500 text-dark-950 font-bold text-xs shadow-glow-emerald transition-all w-full sm:w-auto justify-center"
+          className="flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-xs shadow-sm transition-all w-full sm:w-auto justify-center"
         >
           <Plus className="w-4 h-4 stroke-[3]" />
           <span>Add Study Task</span>

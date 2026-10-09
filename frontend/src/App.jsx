@@ -180,6 +180,8 @@ export default function App() {
             onToggleTask={handleToggleTask}
             onOpenTaskModal={() => setIsTaskModalOpen(true)}
             onOpenProblemModal={() => setIsProblemModalOpen(true)}
+            onOpenAuthModal={() => setIsAuthModalOpen(true)}
+            currentUser={currentUser}
             setActiveTab={setActiveTab}
           />
         )}

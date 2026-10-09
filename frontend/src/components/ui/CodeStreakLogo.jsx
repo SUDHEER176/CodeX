@@ -82,12 +82,12 @@ export default function CodeStreakLogo({
 
       {/* CodeStreak Typography */}
       {showText && (
-        <div className="flex items-center tracking-tight leading-none font-bold">
-          <span className={`${textColor} ${textSize} font-extrabold tracking-tight`}>
+        <div className="flex items-center tracking-tight leading-none">
+          <span className={`${textColor} ${textSize} font-medium tracking-tight`}>
             Code
           </span>
           <span 
-            className={`${textSize} font-black tracking-tight`}
+            className={`${textSize} font-semibold tracking-tight`}
             style={{ color: streakColor }}
           >
             Streak
