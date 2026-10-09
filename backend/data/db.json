@@ -1,0 +1,663 @@
+{
+  "user": {
+    "name": "Alex Learner",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+    "targetRole": "Software Engineering Intern / SDE-1",
+    "targetCompany": "FAANG & Top Tier Startups",
+    "dailyGoal": 3,
+    "streak": 7,
+    "lastActiveDate": "2026-10-09"
+  },
+  "tasks": [
+    {
+      "id": "task-1",
+      "title": "Learn Binary Search on Rotated Array",
+      "topic": "Searching & Sorting",
+      "estimatedMinutes": 30,
+      "completed": true,
+      "date": "2026-10-09",
+      "carriedOver": false,
+      "priority": "High"
+    },
+    {
+      "id": "task-2",
+      "title": "Solve 3 Two-Pointer Medium Problems",
+      "topic": "Arrays & Strings",
+      "estimatedMinutes": 45,
+      "completed": true,
+      "date": "2026-10-09",
+      "carriedOver": false,
+      "priority": "High"
+    },
+    {
+      "id": "task-3",
+      "title": "Revise Yesterday's Mistakes (Stack Monotonic)",
+      "topic": "Stacks & Queues",
+      "estimatedMinutes": 15,
+      "completed": true,
+      "date": "2026-10-09",
+      "carriedOver": false,
+      "priority": "Medium"
+    },
+    {
+      "id": "task-4",
+      "title": "Practice Time & Space Complexity Analysis",
+      "topic": "Basics & Math",
+      "estimatedMinutes": 20,
+      "completed": true,
+      "date": "2026-10-09",
+      "carriedOver": false,
+      "priority": "Low"
+    }
+  ],
+  "problems": [
+    {
+      "id": "prob-1",
+      "title": "Two Sum",
+      "platform": "LeetCode",
+      "difficulty": "Easy",
+      "topic": "Arrays & Hashing",
+      "link": "https://leetcode.com/problems/two-sum/",
+      "solveStatus": "Independently",
+      "needsRevision": false,
+      "timeSpentMinutes": 15,
+      "notes": "Used Hash Map to achieve O(n) time and O(n) space complexity.",
+      "solvedAt": "2026-10-05T08:13:34.138Z"
+    },
+    {
+      "id": "prob-2",
+      "title": "3Sum",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "topic": "Two Pointers",
+      "link": "https://leetcode.com/problems/3sum/",
+      "solveStatus": "Needed Hint",
+      "needsRevision": false,
+      "timeSpentMinutes": 35,
+      "notes": "Sort the array first, then use two pointers. Beware of duplicate triplets!",
+      "solvedAt": "2026-10-06T08:13:34.138Z"
+    },
+    {
+      "id": "prob-3",
+      "title": "Valid Parentheses",
+      "platform": "LeetCode",
+      "difficulty": "Easy",
+      "topic": "Stacks & Queues",
+      "link": "https://leetcode.com/problems/valid-parentheses/",
+      "solveStatus": "Independently",
+      "needsRevision": false,
+      "timeSpentMinutes": 10,
+      "notes": "Classic stack problem. Push opening brackets, match when closing encountered.",
+      "solvedAt": "2026-10-07T08:13:34.138Z"
+    },
+    {
+      "id": "prob-4",
+      "title": "Longest Substring Without Repeating Characters",
+      "platform": "LeetCode",
+      "difficulty": "Medium",
+      "topic": "Sliding Window",
+      "link": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+      "solveStatus": "Independently",
+      "needsRevision": false,
+      "timeSpentMinutes": 25,
+      "notes": "Sliding window with set / index map. Update left pointer when duplicate seen.",
+      "solvedAt": "2026-10-08T08:13:34.138Z"
+    },
+    {
+      "id": "prob-5",
+      "title": "Trapping Rain Water",
+      "platform": "LeetCode",
+      "difficulty": "Hard",
+      "topic": "Two Pointers",
+      "link": "https://leetcode.com/problems/trapping-rain-water/",
+      "solveStatus": "Looked at Solution",
+      "needsRevision": false,
+      "timeSpentMinutes": 50,
+      "notes": "Two-pointer approach using left_max and right_max bounds. Must re-solve next week!",
+      "solvedAt": "2026-10-09T08:13:34.138Z"
+    },
+    {
+      "id": "prob-6",
+      "title": "Merge Two Sorted Lists",
+      "platform": "LeetCode",
+      "difficulty": "Easy",
+      "topic": "Linked Lists",
+      "link": "https://leetcode.com/problems/merge-two-sorted-lists/",
+      "solveStatus": "Independently",
+      "needsRevision": false,
+      "timeSpentMinutes": 12,
+      "notes": "Dummy head node simplifies pointer manipulation.",
+      "solvedAt": "2026-10-09T08:13:34.138Z"
+    }
+  ],
+  "roadmap": [
+    {
+      "week": 1,
+      "title": "Arrays & Strings Mastery",
+      "description": "Fundamental memory layouts, two pointers, prefix sums, and sliding window techniques.",
+      "status": "completed",
+      "progress": 100,
+      "topics": [
+        {
+          "name": "Array Basics & Dynamic Arrays",
+          "completed": true
+        },
+        {
+          "name": "Two Pointers Technique",
+          "completed": true
+        },
+        {
+          "name": "Sliding Window Patterns",
+          "completed": true
+        },
+        {
+          "name": "Prefix Sums & Frequency Maps",
+          "completed": true
+        }
+      ],
+      "curatedProblemsCount": 15,
+      "completedProblemsCount": 15
+    },
+    {
+      "week": 2,
+      "title": "Searching, Sorting & Stacks",
+      "description": "Binary search variations, quick/merge sort concepts, and monotonic stacks/queues.",
+      "status": "in-progress",
+      "progress": 65,
+      "topics": [
+        {
+          "name": "Binary Search on Answer Space",
+          "completed": true
+        },
+        {
+          "name": "Rotated Sorted Array Search",
+          "completed": true
+        },
+        {
+          "name": "Monotonic Stack Patterns",
+          "completed": true
+        },
+        {
+          "name": "Priority Queues / Min-Max Heaps",
+          "completed": false
+        }
+      ],
+      "curatedProblemsCount": 18,
+      "completedProblemsCount": 12
+    },
+    {
+      "week": 3,
+      "title": "Linked Lists & Fast-Slow Pointers",
+      "description": "Reversal, cycle detection (Floyd's algorithm), LRU Cache, and merge sorting on lists.",
+      "status": "upcoming",
+      "progress": 0,
+      "topics": [
+        {
+          "name": "Singly & Doubly Linked Lists",
+          "completed": false
+        },
+        {
+          "name": "Tortoise & Hare Cycle Detection",
+          "completed": false
+        },
+        {
+          "name": "Reversing in K-Groups",
+          "completed": false
+        },
+        {
+          "name": "LRU Cache Implementation",
+          "completed": false
+        }
+      ],
+      "curatedProblemsCount": 12,
+      "completedProblemsCount": 0
+    },
+    {
+      "week": 4,
+      "title": "Binary Trees & BST",
+      "description": "Tree traversals (Inorder/Pre/Post/Level), LCA, diameter, and binary search tree properties.",
+      "status": "upcoming",
+      "progress": 0,
+      "topics": [
+        {
+          "name": "DFS Traversals & Recursive Views",
+          "completed": false
+        },
+        {
+          "name": "BFS Level Order & Zigzag",
+          "completed": false
+        },
+        {
+          "name": "Lowest Common Ancestor (LCA)",
+          "completed": false
+        },
+        {
+          "name": "BST Validation & Construction",
+          "completed": false
+        }
+      ],
+      "curatedProblemsCount": 20,
+      "completedProblemsCount": 0
+    },
+    {
+      "week": 5,
+      "title": "Graphs: BFS, DFS & Shortest Paths",
+      "description": "Adjacency representations, topological sort, Dijkstra, Union-Find (DSU).",
+      "status": "upcoming",
+      "progress": 0,
+      "topics": [
+        {
+          "name": "Graph Traversals (BFS / DFS)",
+          "completed": false
+        },
+        {
+          "name": "Topological Sort (Kahn's Algo)",
+          "completed": false
+        },
+        {
+          "name": "Disjoint Set Union (DSU)",
+          "completed": false
+        },
+        {
+          "name": "Dijkstra's Shortest Path",
+          "completed": false
+        }
+      ],
+      "curatedProblemsCount": 22,
+      "completedProblemsCount": 0
+    },
+    {
+      "week": 6,
+      "title": "Dynamic Programming & Backtracking",
+      "description": "1D/2D memoization vs tabulation, knapsack, LCS, LIS, and state-machine DP.",
+      "status": "upcoming",
+      "progress": 0,
+      "topics": [
+        {
+          "name": "1D DP & Subsequence patterns",
+          "completed": false
+        },
+        {
+          "name": "0/1 Knapsack & Unbounded",
+          "completed": false
+        },
+        {
+          "name": "Longest Common Subsequence (LCS)",
+          "completed": false
+        },
+        {
+          "name": "Backtracking (Permutations, N-Queens)",
+          "completed": false
+        }
+      ],
+      "curatedProblemsCount": 25,
+      "completedProblemsCount": 0
+    }
+  ],
+  "heatmaps": [
+    {
+      "date": "2026-07-11",
+      "count": 2
+    },
+    {
+      "date": "2026-07-12",
+      "count": 0
+    },
+    {
+      "date": "2026-07-13",
+      "count": 0
+    },
+    {
+      "date": "2026-07-14",
+      "count": 2
+    },
+    {
+      "date": "2026-07-15",
+      "count": 0
+    },
+    {
+      "date": "2026-07-16",
+      "count": 0
+    },
+    {
+      "date": "2026-07-17",
+      "count": 2
+    },
+    {
+      "date": "2026-07-18",
+      "count": 0
+    },
+    {
+      "date": "2026-07-19",
+      "count": 0
+    },
+    {
+      "date": "2026-07-20",
+      "count": 1
+    },
+    {
+      "date": "2026-07-21",
+      "count": 0
+    },
+    {
+      "date": "2026-07-22",
+      "count": 0
+    },
+    {
+      "date": "2026-07-23",
+      "count": 0
+    },
+    {
+      "date": "2026-07-24",
+      "count": 2
+    },
+    {
+      "date": "2026-07-25",
+      "count": 0
+    },
+    {
+      "date": "2026-07-26",
+      "count": 2
+    },
+    {
+      "date": "2026-07-27",
+      "count": 0
+    },
+    {
+      "date": "2026-07-28",
+      "count": 0
+    },
+    {
+      "date": "2026-07-29",
+      "count": 2
+    },
+    {
+      "date": "2026-07-30",
+      "count": 0
+    },
+    {
+      "date": "2026-07-31",
+      "count": 0
+    },
+    {
+      "date": "2026-08-01",
+      "count": 2
+    },
+    {
+      "date": "2026-08-02",
+      "count": 0
+    },
+    {
+      "date": "2026-08-03",
+      "count": 0
+    },
+    {
+      "date": "2026-08-04",
+      "count": 0
+    },
+    {
+      "date": "2026-08-05",
+      "count": 0
+    },
+    {
+      "date": "2026-08-06",
+      "count": 0
+    },
+    {
+      "date": "2026-08-07",
+      "count": 2
+    },
+    {
+      "date": "2026-08-08",
+      "count": 0
+    },
+    {
+      "date": "2026-08-09",
+      "count": 0
+    },
+    {
+      "date": "2026-08-10",
+      "count": 0
+    },
+    {
+      "date": "2026-08-11",
+      "count": 0
+    },
+    {
+      "date": "2026-08-12",
+      "count": 0
+    },
+    {
+      "date": "2026-08-13",
+      "count": 2
+    },
+    {
+      "date": "2026-08-14",
+      "count": 0
+    },
+    {
+      "date": "2026-08-15",
+      "count": 0
+    },
+    {
+      "date": "2026-08-16",
+      "count": 0
+    },
+    {
+      "date": "2026-08-17",
+      "count": 0
+    },
+    {
+      "date": "2026-08-18",
+      "count": 0
+    },
+    {
+      "date": "2026-08-19",
+      "count": 2
+    },
+    {
+      "date": "2026-08-20",
+      "count": 0
+    },
+    {
+      "date": "2026-08-21",
+      "count": 2
+    },
+    {
+      "date": "2026-08-22",
+      "count": 2
+    },
+    {
+      "date": "2026-08-23",
+      "count": 0
+    },
+    {
+      "date": "2026-08-24",
+      "count": 0
+    },
+    {
+      "date": "2026-08-25",
+      "count": 2
+    },
+    {
+      "date": "2026-08-26",
+      "count": 0
+    },
+    {
+      "date": "2026-08-27",
+      "count": 0
+    },
+    {
+      "date": "2026-08-28",
+      "count": 2
+    },
+    {
+      "date": "2026-08-29",
+      "count": 0
+    },
+    {
+      "date": "2026-08-30",
+      "count": 0
+    },
+    {
+      "date": "2026-08-31",
+      "count": 2
+    },
+    {
+      "date": "2026-09-01",
+      "count": 0
+    },
+    {
+      "date": "2026-09-02",
+      "count": 0
+    },
+    {
+      "date": "2026-09-03",
+      "count": 1
+    },
+    {
+      "date": "2026-09-04",
+      "count": 0
+    },
+    {
+      "date": "2026-09-05",
+      "count": 0
+    },
+    {
+      "date": "2026-09-06",
+      "count": 1
+    },
+    {
+      "date": "2026-09-07",
+      "count": 0
+    },
+    {
+      "date": "2026-09-08",
+      "count": 0
+    },
+    {
+      "date": "2026-09-09",
+      "count": 2
+    },
+    {
+      "date": "2026-09-10",
+      "count": 0
+    },
+    {
+      "date": "2026-09-11",
+      "count": 0
+    },
+    {
+      "date": "2026-09-12",
+      "count": 2
+    },
+    {
+      "date": "2026-09-13",
+      "count": 0
+    },
+    {
+      "date": "2026-09-14",
+      "count": 0
+    },
+    {
+      "date": "2026-09-15",
+      "count": 1
+    },
+    {
+      "date": "2026-09-16",
+      "count": 0
+    },
+    {
+      "date": "2026-09-17",
+      "count": 0
+    },
+    {
+      "date": "2026-09-18",
+      "count": 0
+    },
+    {
+      "date": "2026-09-19",
+      "count": 0
+    },
+    {
+      "date": "2026-09-20",
+      "count": 3
+    },
+    {
+      "date": "2026-09-21",
+      "count": 2
+    },
+    {
+      "date": "2026-09-22",
+      "count": 2
+    },
+    {
+      "date": "2026-09-23",
+      "count": 2
+    },
+    {
+      "date": "2026-09-24",
+      "count": 3
+    },
+    {
+      "date": "2026-09-25",
+      "count": 2
+    },
+    {
+      "date": "2026-09-26",
+      "count": 2
+    },
+    {
+      "date": "2026-09-27",
+      "count": 4
+    },
+    {
+      "date": "2026-09-28",
+      "count": 1
+    },
+    {
+      "date": "2026-09-29",
+      "count": 2
+    },
+    {
+      "date": "2026-09-30",
+      "count": 2
+    },
+    {
+      "date": "2026-10-01",
+      "count": 1
+    },
+    {
+      "date": "2026-10-02",
+      "count": 3
+    },
+    {
+      "date": "2026-10-03",
+      "count": 4
+    },
+    {
+      "date": "2026-10-04",
+      "count": 2
+    },
+    {
+      "date": "2026-10-05",
+      "count": 1
+    },
+    {
+      "date": "2026-10-06",
+      "count": 2
+    },
+    {
+      "date": "2026-10-07",
+      "count": 2
+    },
+    {
+      "date": "2026-10-08",
+      "count": 3
+    },
+    {
+      "date": "2026-10-09",
+      "count": 3
+    }
+  ]
+}
