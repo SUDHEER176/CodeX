@@ -13,7 +13,6 @@ import {
   TrendingUp,
   BrainCircuit
 } from 'lucide-react';
-import CodeStreakLogo from './ui/CodeStreakLogo';
 import ShinyText from './reactbits/ShinyText';
 import DecryptedText from './reactbits/DecryptedText';
 import SpotlightCard from './reactbits/SpotlightCard';
@@ -34,8 +33,8 @@ export default function HeroSection({
     <section className="relative w-full overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-[#0e131f]/90 via-[#07090e]/95 to-black p-6 sm:p-10 shadow-2xl backdrop-blur-2xl">
       
       {/* Dynamic Ambient Background Glows */}
-      <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-b from-[#ff5500]/15 via-[#3b82f6]/10 to-transparent blur-[100px] rounded-full" />
-      <div className="pointer-events-none absolute -bottom-20 -right-20 w-80 h-80 bg-[#ff5500]/10 blur-[80px] rounded-full" />
+      <div className="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-b from-[#0066FF]/20 via-[#0052FF]/10 to-transparent blur-[100px] rounded-full" />
+      <div className="pointer-events-none absolute -bottom-20 -right-20 w-80 h-80 bg-[#0066FF]/15 blur-[80px] rounded-full" />
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
         
@@ -44,27 +43,22 @@ export default function HeroSection({
           
           {/* Top Pill Badges */}
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#ff5500]/10 border border-[#ff5500]/25 text-[#ff6611] text-xs font-bold shadow-[0_0_15px_-3px_rgba(255,85,0,0.3)]">
-              <Flame className="w-3.5 h-3.5 animate-flame" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/30 text-[#38bdf8] text-xs font-bold shadow-[0_0_15px_-3px_rgba(0,102,255,0.4)]">
+              <Flame className="w-3.5 h-3.5 text-[#0066FF]" />
               <span>{streakCount} Day Consistency Streak</span>
             </div>
 
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-semibold">
-              <Sparkles className="w-3.5 h-3.5 text-brand-400" />
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
               <ShinyText text={`Target: ${stats.user?.targetCompany || 'FAANG & Top Tech'}`} speed={3.5} />
             </div>
           </div>
 
-          {/* Main Hero Header with CodeStreak Brand */}
           <div className="space-y-3">
-            <div className="flex items-center justify-center lg:justify-start">
-              <CodeStreakLogo size={48} textSize="text-3xl sm:text-4xl" animated={true} />
-            </div>
-
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight font-heading">
               Master DSA & Build <br className="hidden sm:inline" />
-              <span className="bg-gradient-to-r from-white via-orange-100 to-[#ff6611] bg-clip-text text-transparent">
-                Unstoppable Habits.
+              <span className="bg-gradient-to-r from-white via-blue-100 to-[#0066FF] bg-clip-text text-transparent">
+                Zero Hesitation.
               </span>
             </h1>
 
@@ -77,7 +71,7 @@ export default function HeroSection({
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
             <button
               onClick={onOpenProblemModal}
-              className="flex items-center gap-2.5 px-6 py-3 rounded-xl bg-gradient-to-r from-[#ff5500] to-[#ff3300] hover:from-[#ff6611] hover:to-[#ff4400] text-white font-bold text-sm shadow-[0_0_25px_-4px_rgba(255,85,0,0.5)] transition-colors active:scale-95"
+              className="flex items-center gap-2.5 px-6 py-3 rounded-xl bg-gradient-to-r from-[#0066FF] to-[#0052FF] hover:from-[#0055dd] hover:to-[#0040cc] text-white font-bold text-sm shadow-[0_0_25px_-4px_rgba(0,102,255,0.5)] transition-colors active:scale-95"
             >
               <Code2 className="w-4 h-4 stroke-[2.5]" />
               <span>+ Log Solved Problem</span>
@@ -85,9 +79,9 @@ export default function HeroSection({
 
             <button
               onClick={onOpenTaskModal}
-              className="flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 border border-white/15 text-sm font-semibold transition-colors hover:border-[#ff5500]/40"
+              className="flex items-center gap-2 px-5 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 border border-white/15 text-sm font-semibold transition-colors hover:border-[#0066FF]/40"
             >
-              <Plus className="w-4 h-4 text-[#ff6611]" />
+              <Plus className="w-4 h-4 text-[#38bdf8]" />
               <span>Add Daily Task</span>
             </button>
 
@@ -110,7 +104,7 @@ export default function HeroSection({
             {/* Top Header of Card */}
             <div className="flex items-center justify-between border-b border-white/10 pb-4 mb-4">
               <div className="flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-[#ff5500]/15 border border-[#ff5500]/30 flex items-center justify-center text-[#ff6611]">
+                <div className="w-9 h-9 rounded-xl bg-[#0066FF]/15 border border-[#0066FF]/30 flex items-center justify-center text-[#38bdf8]">
                   <BrainCircuit className="w-5 h-5" />
                 </div>
                 <div>
@@ -142,19 +136,19 @@ export default function HeroSection({
                   <span className="text-2xl font-black text-white font-mono">
                     {completedToday}/{totalToday || 4}
                   </span>
-                  <span className="text-[11px] text-[#ff6611] font-bold">{todayProgress}%</span>
+                  <span className="text-[11px] text-[#38bdf8] font-bold">{todayProgress}%</span>
                 </div>
               </div>
             </div>
 
             {/* Daily Goal Progress Bar */}
-            <div className="space-y-2 p-3.5 rounded-xl bg-gradient-to-r from-white/[0.04] to-[#ff5500]/[0.06] border border-white/5">
+            <div className="space-y-2 p-3.5 rounded-xl bg-gradient-to-r from-white/[0.04] to-[#0066FF]/[0.08] border border-white/5">
               <div className="flex items-center justify-between text-xs">
                 <span className="text-slate-300 font-medium flex items-center gap-1.5">
-                  <Zap className="w-3.5 h-3.5 text-[#ff6611]" />
+                  <Zap className="w-3.5 h-3.5 text-[#38bdf8]" />
                   Today's Syllabus Goal
                 </span>
-                <span className="text-[#ff6611] font-bold">{completedToday} / {totalToday || 4} Done</span>
+                <span className="text-[#38bdf8] font-bold">{completedToday} / {totalToday || 4} Done</span>
               </div>
               <div className="w-full h-2 rounded-full bg-black/60 overflow-hidden p-0.5 border border-white/5">
                 <div 

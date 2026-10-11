@@ -97,7 +97,7 @@ export function BottomNavBar({
                 aria-hidden
                 className={cn(
                   "transition-colors duration-200",
-                  isActive ? "text-[#ff5500]" : "text-slate-400"
+                  isActive ? "text-[#0066FF]" : "text-slate-400"
                 )}
               />
               {showBadge && (

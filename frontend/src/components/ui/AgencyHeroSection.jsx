@@ -66,42 +66,22 @@ export default function AgencyHeroSection({
   ];
 
   const brandList = [
-    {
-      logo: "https://cdn.simpleicons.org/google/ffffff",
-      name: "Google",
-    },
-    {
-      logo: "https://cdn.simpleicons.org/meta/ffffff",
-      name: "Meta",
-    },
-    {
-      logo: "https://cdn.simpleicons.org/amazon/ffffff",
-      name: "Amazon",
-    },
-    {
-      logo: "https://cdn.simpleicons.org/apple/ffffff",
-      name: "Apple",
-    },
-    {
-      logo: "https://cdn.simpleicons.org/microsoft/ffffff",
-      name: "Microsoft",
-    },
-    {
-      logo: "https://cdn.simpleicons.org/netflix/ffffff",
-      name: "Netflix",
-    },
-    {
-      logo: "https://cdn.simpleicons.org/uber/ffffff",
-      name: "Uber",
-    },
-    {
-      logo: "https://cdn.simpleicons.org/stripe/ffffff",
-      name: "Stripe",
-    },
-    {
-      logo: "https://cdn.simpleicons.org/leetcode/ffffff",
-      name: "LeetCode",
-    },
+    { name: "Google" },
+    { name: "Microsoft" },
+    { name: "Amazon" },
+    { name: "Meta" },
+    { name: "Apple" },
+    { name: "Netflix" },
+    { name: "Stripe" },
+    { name: "LeetCode" },
+    { name: "OpenAI" },
+    { name: "Uber" },
+    { name: "Airbnb" },
+    { name: "Spotify" },
+    { name: "Adobe" },
+    { name: "Palantir" },
+    { name: "Databricks" },
+    { name: "Coinbase" }
   ];
 
   return (

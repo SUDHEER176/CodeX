@@ -74,7 +74,7 @@ const Cross = (
 const Arc = ({ spin }) => (
   <motion.svg
     viewBox="0 0 16 16"
-    className="size-3.5 text-[#ff5500]"
+    className="size-3.5 text-[#0066FF]"
     aria-hidden
     animate={spin ? { rotate: 360 } : { rotate: 0 }}
     transition={
@@ -156,7 +156,7 @@ export function TaskSteps({
                 isDone 
                   ? "bg-white/[0.015] border-white/[0.04] opacity-75"
                   : isActive
-                    ? "bg-[#ff5500]/[0.07] border-[#ff5500]/40 shadow-[0_0_20px_rgba(255,85,0,0.12)] ring-1 ring-[#ff5500]/20"
+                    ? "bg-[#0066FF]/[0.08] border-[#0066FF]/50 shadow-[0_0_20px_rgba(0,102,255,0.2)] ring-1 ring-[#0066FF]/30"
                     : "bg-white/[0.02] border-white/[0.06] hover:bg-white/[0.04] hover:border-white/15"
               }`}
             >
@@ -188,7 +188,7 @@ export function TaskSteps({
                   ) : isActive ? (
                     <motion.span
                       key="active"
-                      className="col-start-1 row-start-1 text-[#ff5500]"
+                      className="col-start-1 row-start-1 text-[#0066FF]"
                       initial={{ opacity: 0, scale: 0.5 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, transition: STILL }}

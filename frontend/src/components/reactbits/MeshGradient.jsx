@@ -7,7 +7,7 @@ import React, { useEffect, useRef } from 'react';
  */
 export default function MeshGradient({
   className = "",
-  colors = ["#ff5500", "#ff3300", "#3b82f6", "#1e1b4b", "#000000"],
+  colors = ["#0066FF", "#0052FF", "#00D2FF", "#0F172A", "#000000"],
   speed = 0.003,
   grain = true,
   opacity = 0.65
@@ -31,11 +31,11 @@ export default function MeshGradient({
 
     // Color nodes in the mesh
     const nodes = [
-      { x: 0.25, y: 0.2, vx: 0.0008, vy: 0.0006, color: colors[0] || '#ff5500', r: 0.6 },
-      { x: 0.75, y: 0.3, vx: -0.0007, vy: 0.0009, color: colors[1] || '#ff3300', r: 0.55 },
-      { x: 0.5, y: 0.75, vx: 0.0009, vy: -0.0007, color: colors[2] || '#3b82f6', r: 0.65 },
-      { x: 0.85, y: 0.8, vx: -0.0008, vy: -0.0008, color: colors[3] || '#1e1b4b', r: 0.7 },
-      { x: 0.15, y: 0.7, vx: 0.0006, vy: 0.0008, color: colors[4] || '#ff8800', r: 0.5 }
+      { x: 0.25, y: 0.2, vx: 0.0008, vy: 0.0006, color: colors[0] || '#0066FF', r: 0.6 },
+      { x: 0.75, y: 0.3, vx: -0.0007, vy: 0.0009, color: colors[1] || '#0052FF', r: 0.55 },
+      { x: 0.5, y: 0.75, vx: 0.0009, vy: -0.0007, color: colors[2] || '#00D2FF', r: 0.65 },
+      { x: 0.85, y: 0.8, vx: -0.0008, vy: -0.0008, color: colors[3] || '#0F172A', r: 0.7 },
+      { x: 0.15, y: 0.7, vx: 0.0006, vy: 0.0008, color: colors[4] || '#38BDF8', r: 0.5 }
     ];
 
     const render = () => {

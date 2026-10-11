@@ -201,7 +201,7 @@ export default function DailyLeetCodeFeed({
       {/* Header */}
       <div className="flex items-center justify-between pb-3 mb-2 border-b border-white/10 px-1">
         <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-lg bg-[#ff5500]/15 border border-[#ff5500]/30 flex items-center justify-center text-[#ff6611]">
+          <div className="w-7 h-7 rounded-lg bg-[#0066FF]/15 border border-[#0066FF]/30 flex items-center justify-center text-[#38bdf8]">
             <Code2 className="w-4 h-4 stroke-[2.5]" />
           </div>
           <div>
@@ -209,7 +209,7 @@ export default function DailyLeetCodeFeed({
             <p className="text-[11px] text-slate-400">Curated day-by-day interview curriculum</p>
           </div>
         </div>
-        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#ff5500]/10 text-[#ff6611] border border-[#ff5500]/25">
+        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#0066FF]/10 text-[#38bdf8] border border-[#0066FF]/25">
           Live
         </span>
       </div>

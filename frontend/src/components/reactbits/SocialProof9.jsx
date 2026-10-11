@@ -1,9 +1,10 @@
 import React from 'react';
+import { BRAND_COMPONENT_MAP } from '../ui/BrandLogos';
 
 /**
  * React Bits Pro: Social Proof 9 Block
  * Minimal logo marquees scrolling in two opposing directions.
- * Features pure black background, delicate opacity transitions, and clean typography.
+ * Features pure black background, authentic colorful tech company vector logos, and sleek typography.
  */
 export default function SocialProof9({
   title = "TRUSTED BY ENGINEERS INTERVIEWING AT THE WORLD'S LEADING TECH COMPANIES",
@@ -12,33 +13,59 @@ export default function SocialProof9({
   className = ""
 }) {
   const defaultRow1 = [
-    { name: "Google", logo: "https://cdn.simpleicons.org/google/ffffff" },
-    { name: "Meta", logo: "https://cdn.simpleicons.org/meta/ffffff" },
-    { name: "Amazon", logo: "https://cdn.simpleicons.org/amazon/ffffff" },
-    { name: "Apple", logo: "https://cdn.simpleicons.org/apple/ffffff" },
-    { name: "Microsoft", logo: "https://cdn.simpleicons.org/microsoft/ffffff" },
-    { name: "Netflix", logo: "https://cdn.simpleicons.org/netflix/ffffff" },
-    { name: "Stripe", logo: "https://cdn.simpleicons.org/stripe/ffffff" },
-    { name: "Uber", logo: "https://cdn.simpleicons.org/uber/ffffff" },
+    { name: "Google" },
+    { name: "Microsoft" },
+    { name: "Amazon" },
+    { name: "Meta" },
+    { name: "Apple" },
+    { name: "Netflix" },
+    { name: "Stripe" },
+    { name: "LeetCode" },
   ];
 
   const defaultRow2 = [
-    { name: "OpenAI", logo: "https://cdn.simpleicons.org/openai/ffffff" },
-    { name: "Palantir", logo: "https://cdn.simpleicons.org/palantir/ffffff" },
-    { name: "Airbnb", logo: "https://cdn.simpleicons.org/airbnb/ffffff" },
-    { name: "Databricks", logo: "https://cdn.simpleicons.org/databricks/ffffff" },
-    { name: "ByteDance", logo: "https://cdn.simpleicons.org/bytedance/ffffff" },
-    { name: "Coinbase", logo: "https://cdn.simpleicons.org/coinbase/ffffff" },
-    { name: "Spotify", logo: "https://cdn.simpleicons.org/spotify/ffffff" },
-    { name: "Adobe", logo: "https://cdn.simpleicons.org/adobe/ffffff" },
+    { name: "OpenAI" },
+    { name: "Uber" },
+    { name: "Airbnb" },
+    { name: "Spotify" },
+    { name: "Adobe" },
+    { name: "Palantir" },
+    { name: "Databricks" },
+    { name: "Coinbase" },
   ];
 
   const r1 = row1Brands && row1Brands.length > 0 ? row1Brands : defaultRow1;
   const r2 = row2Brands && row2Brands.length > 0 ? row2Brands : defaultRow2;
 
-  // Repeat for seamless loop
+  // Repeat for seamless marquee loop
   const duplicatedRow1 = [...r1, ...r1, ...r1];
   const duplicatedRow2 = [...r2, ...r2, ...r2];
+
+  const renderBrand = (brand, idx, prefix) => {
+    const BrandIconComponent = brand.icon || BRAND_COMPONENT_MAP[brand.name];
+
+    return (
+      <div
+        key={`${prefix}-${brand.name}-${idx}`}
+        className="flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.08] hover:border-white/[0.15] opacity-85 hover:opacity-100 hover:scale-105 transition-all duration-200 group cursor-default select-none shadow-sm"
+      >
+        {BrandIconComponent ? (
+          <div className="flex-shrink-0 flex items-center justify-center">
+            <BrandIconComponent size={18} />
+          </div>
+        ) : brand.logo ? (
+          <img
+            src={brand.logo}
+            alt={brand.name}
+            className="h-4.5 w-auto object-contain transition-all"
+          />
+        ) : null}
+        <span className="text-xs sm:text-sm font-normal tracking-wide text-slate-200 group-hover:text-white font-sans">
+          {brand.name}
+        </span>
+      </div>
+    );
+  };
 
   return (
     <div className={`w-full py-10 overflow-hidden bg-black text-white relative rounded-3xl border border-white/[0.06] ${className}`}>
@@ -50,49 +77,17 @@ export default function SocialProof9({
         </p>
       </div>
 
-      {/* Two-Direction Marquee Wrapper with Side Masks */}
-      <div className="relative w-full space-y-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
+      {/* Two-Direction Marquee Wrapper with Smooth Gradient Side Masks */}
+      <div className="relative w-full space-y-4 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
         
         {/* Row 1: Forward Marquee */}
-        <div className="flex gap-10 sm:gap-16 items-center whitespace-nowrap animate-marquee">
-          {duplicatedRow1.map((brand, idx) => (
-            <div
-              key={`r1-${brand.name}-${idx}`}
-              className="flex items-center gap-2.5 opacity-45 hover:opacity-100 transition-opacity duration-300 group cursor-default select-none grayscale hover:grayscale-0"
-            >
-              {brand.logo ? (
-                <img
-                  src={brand.logo}
-                  alt={brand.name}
-                  className="h-4.5 sm:h-5 w-auto object-contain brightness-90 group-hover:brightness-100 transition-all"
-                />
-              ) : null}
-              <span className="text-xs sm:text-sm font-normal tracking-wide text-slate-300 group-hover:text-white font-mono">
-                {brand.name}
-              </span>
-            </div>
-          ))}
+        <div className="flex gap-6 sm:gap-8 items-center whitespace-nowrap animate-marquee">
+          {duplicatedRow1.map((brand, idx) => renderBrand(brand, idx, 'r1'))}
         </div>
 
         {/* Row 2: Reverse Marquee */}
-        <div className="flex gap-10 sm:gap-16 items-center whitespace-nowrap animate-marquee-reverse">
-          {duplicatedRow2.map((brand, idx) => (
-            <div
-              key={`r2-${brand.name}-${idx}`}
-              className="flex items-center gap-2.5 opacity-45 hover:opacity-100 transition-opacity duration-300 group cursor-default select-none grayscale hover:grayscale-0"
-            >
-              {brand.logo ? (
-                <img
-                  src={brand.logo}
-                  alt={brand.name}
-                  className="h-4.5 sm:h-5 w-auto object-contain brightness-90 group-hover:brightness-100 transition-all"
-                />
-              ) : null}
-              <span className="text-xs sm:text-sm font-normal tracking-wide text-slate-300 group-hover:text-white font-mono">
-                {brand.name}
-              </span>
-            </div>
-          ))}
+        <div className="flex gap-6 sm:gap-8 items-center whitespace-nowrap animate-marquee-reverse">
+          {duplicatedRow2.map((brand, idx) => renderBrand(brand, idx, 'r2'))}
         </div>
 
       </div>

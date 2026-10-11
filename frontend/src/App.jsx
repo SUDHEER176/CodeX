@@ -2,15 +2,11 @@ import React, { useState, useEffect } from 'react';
 import Navbar, { navTabs } from './components/Navbar';
 import BottomNavBar from './components/ui/bottom-nav-bar';
 import Dashboard from './components/Dashboard';
-import DailyPlanner from './components/DailyPlanner';
-import ProblemTracker from './components/ProblemTracker';
-import RoadmapView from './components/RoadmapView';
-import RevisionQueue from './components/RevisionQueue';
-import StatsCharts from './components/StatsCharts';
 import FocusTimer from './components/FocusTimer';
 import AddTaskModal from './components/AddTaskModal';
 import AddProblemModal from './components/AddProblemModal';
 import AuthModal from './components/AuthModal';
+import Footer from './components/Footer';
 import Particles from './components/reactbits/Particles';
 import { api } from './services/api';
 
@@ -143,15 +139,47 @@ export default function App() {
   const handleTabChange = (idx, item) => {
     if (item?.id) {
       setActiveTab(item.id);
+      if (item.id === 'dashboard') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const el = document.getElementById(item.id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
     }
   };
+
+  // Scroll spy to keep activeTab in sync with scroll position across sections
+  useEffect(() => {
+    const sectionIds = ['analytics', 'revision', 'roadmap', 'problems', 'planner'];
+    const handleScroll = () => {
+      if (window.scrollY < 350) {
+        setActiveTab('dashboard');
+        return;
+      }
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 250 && rect.bottom >= 100) {
+            setActiveTab(id);
+            return;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="relative min-h-screen bg-black text-slate-100 flex flex-col selection:bg-brand-500 selection:text-black overflow-x-hidden pb-20 md:pb-0">
       
       {/* React Bits Ambient Background Particles */}
       <Particles
-        particleColors={['#22c55e', '#06b6d4', '#a855f7', '#f97316']}
+        particleColors={['#0066FF', '#00C2FF', '#38bdf8', '#818cf8']}
         particleCount={28}
         speed={0.12}
         alpha={0.25}
@@ -171,62 +199,22 @@ export default function App() {
         onOpenAuthModal={() => setIsAuthModalOpen(true)}
       />
 
-      {/* Main Content Area */}
-      <main className="relative z-10 flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {activeTab === 'dashboard' && (
-          <Dashboard
-            stats={stats}
-            todayTasks={todayTasks}
-            onToggleTask={handleToggleTask}
-            onOpenTaskModal={() => setIsTaskModalOpen(true)}
-            onOpenProblemModal={() => setIsProblemModalOpen(true)}
-            onOpenAuthModal={() => setIsAuthModalOpen(true)}
-            currentUser={currentUser}
-            setActiveTab={setActiveTab}
-          />
-        )}
-
-        {activeTab === 'planner' && (
-          <DailyPlanner
-            tasks={tasks.filter(t => t.date === selectedDate)}
-            onToggleTask={handleToggleTask}
-            onCarryOverTask={handleCarryOverTask}
-            onDeleteTask={handleDeleteTask}
-            onOpenTaskModal={() => setIsTaskModalOpen(true)}
-            selectedDate={selectedDate}
-            setSelectedDate={setSelectedDate}
-          />
-        )}
-
-        {activeTab === 'problems' && (
-          <ProblemTracker
-            problems={problems}
-            onToggleRevision={handleToggleRevision}
-            onDeleteProblem={handleDeleteProblem}
-            onOpenProblemModal={() => setIsProblemModalOpen(true)}
-          />
-        )}
-
-        {activeTab === 'roadmap' && (
-          <RoadmapView
-            roadmap={roadmap}
-            onToggleTopic={handleToggleRoadmapTopic}
-          />
-        )}
-
-        {activeTab === 'revision' && (
-          <RevisionQueue
-            problems={problems}
-            onToggleRevision={handleToggleRevision}
-          />
-        )}
-
-        {activeTab === 'analytics' && (
-          <StatsCharts
-            stats={stats}
-          />
-        )}
+      {/* Main Content Area: Unified Dashboard with all sections */}
+      <main className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <Dashboard
+          stats={stats}
+          todayTasks={todayTasks}
+          onToggleTask={handleToggleTask}
+          onOpenTaskModal={() => setIsTaskModalOpen(true)}
+          onOpenProblemModal={() => setIsProblemModalOpen(true)}
+          onOpenAuthModal={() => setIsAuthModalOpen(true)}
+          currentUser={currentUser}
+          setActiveTab={setActiveTab}
+        />
       </main>
+
+      {/* Footer 12 – Always at the bottom of the Dashboard */}
+      <Footer stats={stats} />
 
       {/* Floating Bottom Nav Bar (Shadcn + Framer Motion Pattern) */}
       <div className="md:hidden">
@@ -268,15 +256,7 @@ export default function App() {
         onLogout={handleLogout}
       />
 
-      {/* Footer */}
-      <footer className="relative z-10 border-t border-white/5 py-6 text-center text-xs text-slate-500">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p>© 2026 CodeStreak • Built with Shadcn UI pattern & Framer Motion</p>
-          <p className="text-slate-400">
-            Frontend: <span className="text-brand-400">React + Tailwind + Framer Motion</span> | Backend: <span className="text-brand-400">Node.js + Express</span>
-          </p>
-        </div>
-      </footer>
+
 
     </div>
   );

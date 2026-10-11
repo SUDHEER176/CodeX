@@ -48,7 +48,7 @@ export default function Header({
                 }}
                 className={`px-3.5 py-1.5 rounded-full text-xs transition-all duration-200 ${
                   isActive
-                    ? "bg-[#ff5500] text-black font-medium shadow-[0_0_12px_rgba(255,85,0,0.3)]"
+                    ? "bg-[#0066FF] text-white font-medium shadow-[0_0_15px_rgba(0,102,255,0.4)]"
                     : "text-slate-400 hover:text-white hover:bg-white/[0.04] font-normal"
                 }`}
               >
@@ -115,7 +115,7 @@ export default function Header({
                 }}
                 className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all ${
                   isActive
-                    ? "bg-[#ff5500] text-black font-medium"
+                    ? "bg-[#0066FF] text-white font-medium"
                     : "text-slate-300 hover:bg-white/[0.04] font-normal"
                 }`}
               >

@@ -17,7 +17,7 @@ const CalendarDay: React.FC<{ day: number | string; isHeader?: boolean; isToday?
   const cellStyle = isHeader
     ? "text-slate-500 font-mono text-[10px]"
     : isToday
-      ? "bg-[#ff5500] text-black font-medium shadow-[0_0_12px_rgba(255,85,0,0.4)]"
+      ? "bg-[#0066FF] text-white font-medium shadow-[0_0_14px_rgba(0,102,255,0.5)]"
       : hasSolved
         ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-medium"
         : "text-slate-400 hover:bg-white/5 hover:text-white font-normal";
@@ -84,7 +84,7 @@ export function Calendar({
         
         {/* Header Content */}
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/[0.03] border border-white/10 text-[11px] text-[#ff5500] font-normal">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/25 text-[11px] text-[#38bdf8] font-normal">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Daily LeetCode Track</span>
           </div>
@@ -122,7 +122,7 @@ export function Calendar({
                 </div>
                 
                 <div className="flex items-center gap-1.5 text-[11px] text-slate-400 font-mono">
-                  <Clock className="w-3 h-3 text-[#ff5500]" />
+                  <Clock className="w-3 h-3 text-[#0066FF]" />
                   <span>30 min drill</span>
                 </div>
               </div>
@@ -139,7 +139,7 @@ export function Calendar({
                   Problems Solved
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded bg-[#ff5500]" />
+                  <span className="w-2 h-2 rounded bg-[#0066FF]" />
                   Today
                 </span>
               </div>

@@ -45,8 +45,8 @@ export default function HowItWorks7({
       title: "Execute Daily Focused Drills",
       description: "Solve 2-3 hand-picked problems per day with real interview time constraints, complexity notes, and test cases.",
       tag: "Daily Practice",
-      color: "text-[#ff5500]",
-      borderColor: "border-[#ff5500]/20",
+      color: "text-[#0066FF]",
+      borderColor: "border-[#0066FF]/20",
       action: onOpenProblemModal
     },
     {
@@ -79,9 +79,9 @@ export default function HowItWorks7({
 
       {/* Section Header */}
       <div className="relative z-10 max-w-3xl mx-auto text-center space-y-3 mb-12">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.03] border border-white/10 text-xs font-normal text-[#ff5500]">
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0066FF]/10 border border-[#0066FF]/25 text-xs font-normal text-[#38bdf8]">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>The CodeStreak Workflow</span>
+          <span>The Zero Hesitation Workflow</span>
         </div>
 
         <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-white leading-tight">
@@ -141,12 +141,12 @@ export default function HowItWorks7({
           <div className="w-full max-w-[340px] sm:max-w-[380px] h-[480px] sm:h-[520px] rounded-t-[140px] sm:rounded-t-[180px] rounded-b-3xl border border-white/15 bg-[#070b14] overflow-hidden relative shadow-[0_20px_60px_-15px_rgba(0,0,0,0.8)] flex flex-col items-center justify-between p-6">
             
             {/* Ambient Arched Crown Glow */}
-            <div className="absolute top-0 inset-x-0 h-36 bg-[radial-gradient(ellipse_at_top,#ff550020,transparent_70%)] pointer-events-none" />
+            <div className="absolute top-0 inset-x-0 h-36 bg-[radial-gradient(ellipse_at_top,#0066FF25,transparent_70%)] pointer-events-none" />
 
             {/* Top Arched Flame Emblem Header */}
             <div className="pt-6 flex flex-col items-center space-y-2 relative z-10">
-              <div className="w-14 h-14 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center shadow-lg">
-                <Flame className="w-7 h-7 text-[#ff5500]" />
+              <div className="w-14 h-14 rounded-full bg-white/[0.04] border border-[#0066FF]/30 flex items-center justify-center shadow-[0_0_20px_rgba(0,102,255,0.25)]">
+                <Flame className="w-7 h-7 text-[#0066FF]" />
               </div>
               <p className="text-xs uppercase tracking-widest text-slate-400 font-normal">
                 Daily Problem Sprint
@@ -187,7 +187,7 @@ export default function HowItWorks7({
             {/* Bottom Consistency Ring Badge */}
             <div className="w-full pb-2 flex items-center justify-between px-3 py-2 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-slate-300 relative z-10">
               <div className="flex items-center gap-2">
-                <Zap className="w-3.5 h-3.5 text-[#ff5500]" />
+                <Zap className="w-3.5 h-3.5 text-[#0066FF]" />
                 <span className="font-normal">Streak Intact</span>
               </div>
               <span className="font-mono text-emerald-400 font-normal">7 Days Active</span>

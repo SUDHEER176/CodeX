@@ -13,29 +13,29 @@ export const FlatRoadmapIcon = ({ size = 36, className = "" }) => (
     xmlns="http://www.w3.org/2000/svg"
     className={className}
   >
-    <rect width="48" height="48" rx="14" fill="#ff5500" fillOpacity="0.12" />
+    <rect width="48" height="48" rx="14" fill="#0066FF" fillOpacity="0.15" />
     <path 
       d="M13 16.5L20.5 13.5L27.5 16.5L35 13.5V31.5L27.5 34.5L20.5 31.5L13 34.5V16.5Z" 
-      stroke="#ff6611" 
+      stroke="#0066FF" 
       strokeWidth="2.5" 
       strokeLinecap="round" 
       strokeLinejoin="round" 
     />
     <path 
       d="M20.5 13.5V31.5" 
-      stroke="#ff9944" 
+      stroke="#38bdf8" 
       strokeWidth="2.5" 
       strokeLinecap="round" 
       strokeLinejoin="round" 
     />
     <path 
       d="M27.5 16.5V34.5" 
-      stroke="#ff9944" 
+      stroke="#38bdf8" 
       strokeWidth="2.5" 
       strokeLinecap="round" 
       strokeLinejoin="round" 
     />
-    <circle cx="31" cy="22" r="2.5" fill="#ff5500" />
+    <circle cx="31" cy="22" r="2.5" fill="#0066FF" />
   </svg>
 );
 

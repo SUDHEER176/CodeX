@@ -287,3 +287,15 @@ export function saveDb(data) {
     console.error("Error saving DB to disk:", err);
   }
 }
+
+export const db = {
+  read: getDb,
+  write: saveDb
+};
+
+export default {
+  getDb,
+  saveDb,
+  db
+};
+

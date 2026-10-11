@@ -25,6 +25,15 @@ import HowItWorks7 from './reactbits/HowItWorks7';
 import DailyLeetCodeFeed from './DailyLeetCodeFeed';
 import TaskSteps from './ui/task-steps';
 import Calendar from './ui/calendar';
+import IntegrationsSection from './ui/integrations-3';
+import Faqs01 from './ui/faqs-01';
+
+// Navbar Sections Integrated into Dashboard
+import DailyPlanner from './DailyPlanner';
+import ProblemTracker from './ProblemTracker';
+import RoadmapView from './RoadmapView';
+import RevisionQueue from './RevisionQueue';
+import StatsCharts from './StatsCharts';
 
 export default function Dashboard({ 
   stats, 
@@ -154,7 +163,7 @@ export default function Dashboard({
             {/* Smooth animated progress line */}
             <div className="w-full h-1 bg-white/[0.04] rounded-full overflow-hidden">
               <div 
-                className="h-full bg-gradient-to-r from-[#ff5500] to-emerald-400 rounded-full transition-all duration-500 ease-out"
+                className="h-full bg-gradient-to-r from-[#0066FF] to-cyan-400 rounded-full transition-all duration-500 ease-out"
                 style={{ width: `${progressPercent}%` }}
               />
             </div>
@@ -187,11 +196,51 @@ export default function Dashboard({
 
       </div>
 
+      {/* ── ALL NAVBAR SECTIONS EMBEDDED DIRECTLY IN DASHBOARD ── */}
+
+      {/* 1. Daily Study Planner Section */}
+      <section id="planner" className="scroll-mt-24 pt-4 border-t border-white/[0.08]">
+        <DailyPlanner setActiveTab={setActiveTab} />
+      </section>
+
+      {/* 2. Problem Tracker Section */}
+      <section id="problems" className="scroll-mt-24 pt-4 border-t border-white/[0.08]">
+        <ProblemTracker setActiveTab={setActiveTab} />
+      </section>
+
+      {/* 3. Structured DSA Roadmap Section */}
+      <section id="roadmap" className="scroll-mt-24 pt-4 border-t border-white/[0.08]">
+        <RoadmapView setActiveTab={setActiveTab} />
+      </section>
+
+      {/* 4. Spaced Repetition Revision Queue Section */}
+      <section id="revision" className="scroll-mt-24 pt-4 border-t border-white/[0.08]">
+        <RevisionQueue setActiveTab={setActiveTab} />
+      </section>
+
+      {/* 5. Performance Intelligence & Analytics Section */}
+      <section id="analytics" className="scroll-mt-24 pt-4 border-t border-white/[0.08]">
+        <StatsCharts setActiveTab={setActiveTab} />
+      </section>
+
       {/* React Bits Pro How It Works 7 Block (Four Steps around Arched Live Simulator Portal) */}
       <HowItWorks7
         setActiveTab={setActiveTab}
         onOpenProblemModal={onOpenProblemModal}
       />
+
+      {/* Modern Ecosystem & AI Coding Tools Integration Hub */}
+      <IntegrationsSection
+        onGetStarted={() => setActiveTab && setActiveTab('planner')}
+      />
+
+      {/* Frequently Asked Questions with Mail & WhatsApp Contact */}
+      <div className="rounded-3xl border border-white/10 bg-black/60 backdrop-blur-xl overflow-hidden shadow-2xl">
+        <Faqs01
+          supportEmail="support@codestreak.dev"
+          whatsappNumber="+1234567890"
+        />
+      </div>
 
     </div>
   );

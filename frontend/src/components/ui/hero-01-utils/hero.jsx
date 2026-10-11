@@ -79,7 +79,7 @@ export default function HeroSection({
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-[1.12]">
             Master Daily DSA with <br />
-            <span className="text-[#ff5500] font-medium">
+            <span className="text-[#0066FF] font-medium">
               Zero Hesitation.
             </span>
           </h1>
@@ -98,18 +98,18 @@ export default function HeroSection({
         >
           <button
             onClick={onOpenProblemModal}
-            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#ff5500] hover:bg-[#ff6611] text-black font-medium text-sm shadow-[0_0_20px_rgba(255,85,0,0.25)] transition-all active:scale-95"
+            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#0066FF] hover:bg-[#0052FF] text-white font-medium text-sm shadow-[0_0_25px_rgba(0,102,255,0.4)] transition-all active:scale-95"
           >
-            <Code2 className="w-4 h-4 text-black stroke-[2]" />
+            <Code2 className="w-4 h-4 text-white stroke-[2]" />
             <span>Start Daily Problem</span>
-            <ArrowRight className="w-4 h-4 text-black stroke-[2]" />
+            <ArrowRight className="w-4 h-4 text-white stroke-[2]" />
           </button>
 
           <button
             onClick={() => onNavigate && onNavigate('roadmap')}
             className="flex items-center gap-2 px-6 py-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-slate-200 font-normal text-sm border border-white/10 transition-all hover:border-white/20 active:scale-95"
           >
-            <Sparkles className="w-4 h-4 text-amber-400" />
+            <Sparkles className="w-4 h-4 text-cyan-400" />
             <span>Explore Curated Roadmap</span>
           </button>
         </motion.div>
@@ -126,7 +126,7 @@ export default function HeroSection({
             <span>450+ Curated Interview Problems</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <Flame className="w-4 h-4 text-[#ff5500]" />
+            <Flame className="w-4 h-4 text-[#0066FF]" />
             <span>Spaced Repetition Engine</span>
           </div>
           <div className="flex items-center gap-1.5">

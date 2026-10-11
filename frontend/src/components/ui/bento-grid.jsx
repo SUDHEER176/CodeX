@@ -25,7 +25,7 @@ const BentoCard = ({
   cta = "Explore",
   onClick,
   badge,
-  accentColor = "#ff5500",
+  accentColor = "#0066FF",
   ...props
 }) => (
   <div

@@ -21,10 +21,10 @@ import CodeStreakLogo from './ui/CodeStreakLogo';
 
 export const navTabs = [
   { id: 'dashboard', label: 'Dashboard', icon: Sparkles },
-  { id: 'planner', label: 'Planner', icon: CheckSquare },
-  { id: 'problems', label: 'Problems', icon: Code2 },
-  { id: 'roadmap', label: 'Roadmap', icon: Map },
-  { id: 'revision', label: 'Revision', icon: RotateCcw },
+  { id: 'planner',   label: 'Planner',   icon: CheckSquare },
+  { id: 'problems',  label: 'Problems',  icon: Code2 },
+  { id: 'roadmap',   label: 'Roadmap',   icon: Map },
+  { id: 'revision',  label: 'Revision',  icon: RotateCcw },
   { id: 'analytics', label: 'Analytics', icon: BarChart3 },
 ];
 
@@ -42,25 +42,37 @@ export default function Navbar({
   currentUser,
   onOpenAuthModal
 }) {
+  const handleNavClick = (tabId) => {
+    setActiveTab(tabId);
+    if (tabId === 'dashboard') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const el = document.getElementById(tabId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  };
+
   return (
     <header className="sticky top-0 z-40 w-full border-b border-white/10 bg-black/90 backdrop-blur-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           
           {/* Logo & Brand */}
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveTab('dashboard')}>
-            <CodeStreakLogo size={36} textSize="text-xl" showText={false} animated={false} />
-            <div>
-              <div className="flex items-center gap-2">
-                <CodeStreakLogo size={0} showText={true} textSize="text-xl" />
-                <span className="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-[#ff5500]/15 text-[#ff6611] border border-[#ff5500]/30">
+          <div className="flex items-center cursor-pointer select-none" onClick={() => handleNavClick('dashboard')}>
+            <CodeStreakLogo 
+              size={36} 
+              textSize="text-xl" 
+              showText={true} 
+              animated={true}
+              subtitle="Master DSA & Ace Tech Interviews"
+              badge={
+                <span className="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded-md bg-[#0066FF]/15 text-[#38bdf8] border border-[#0066FF]/30 leading-none shadow-[0_0_12px_rgba(0,102,255,0.2)]">
                   <ShinyText text="PRO" speed={3} />
                 </span>
-              </div>
-              <p className="text-[11px] text-slate-400 font-medium hidden sm:block">
-                Master DSA & Ace Tech Interviews
-              </p>
-            </div>
+              }
+            />
           </div>
 
           {/* Animated Expanding Spring Nav Bar (Pure Black Theme) */}
@@ -81,7 +93,7 @@ export default function Navbar({
                 <motion.button
                   key={item.id}
                   whileTap={{ scale: 0.96 }}
-                  onClick={() => setActiveTab(item.id)}
+                  onClick={() => handleNavClick(item.id)}
                   className={cn(
                     "flex items-center px-3.5 py-2 rounded-full transition-all duration-200 relative h-10 min-w-[42px] max-h-[42px]",
                     isActive
@@ -98,7 +110,7 @@ export default function Navbar({
                       aria-hidden
                       className={cn(
                         "transition-colors duration-200",
-                        isActive ? "text-[#ff5500]" : "text-slate-400"
+                        isActive ? "text-[#0066FF]" : "text-slate-400"
                       )}
                     />
                     {showBadge && (
@@ -140,8 +152,8 @@ export default function Navbar({
           <div className="flex items-center gap-2.5">
             
             {/* Streak Counter Badge Pill */}
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/70 border border-white/15 text-xs font-normal text-white cursor-default">
-              <Flame className="w-3.5 h-3.5 text-[#ff5500] fill-[#ff5500] animate-flame" />
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/70 border border-[#0066FF]/30 text-xs font-normal text-white cursor-default shadow-[0_0_12px_rgba(0,102,255,0.15)]">
+              <Flame className="w-3.5 h-3.5 text-[#0066FF] fill-[#0066FF] animate-pulse" />
               <span className="font-mono text-white flex items-center gap-1">
                 <CountUp to={streak} duration={1} />
                 <span className="text-slate-400">days</span>

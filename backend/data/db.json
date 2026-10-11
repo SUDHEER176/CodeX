@@ -10,6 +10,16 @@
   },
   "tasks": [
     {
+      "id": "task-1791641604828",
+      "title": "two pointeers",
+      "topic": "Arrays & Strings",
+      "estimatedMinutes": 30,
+      "completed": false,
+      "date": "2026-10-10",
+      "carriedOver": false,
+      "priority": "Medium"
+    },
+    {
       "id": "task-1",
       "title": "Learn Binary Search on Rotated Array",
       "topic": "Searching & Sorting",
